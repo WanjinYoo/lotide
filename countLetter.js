@@ -8,7 +8,7 @@ const countLetters = function(input) {
         result[element] = 1;
       }
     }
-  
+
   }
   return result;
 };
