@@ -10,13 +10,6 @@ const eqArrays = function(array1,array2) {
     return true;
   }
 };
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😃Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`😩Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 const eqObjects = function(object1, object2) {
   if (Object.keys(object2).length !== Object.keys(object1).length) {
     return false;
