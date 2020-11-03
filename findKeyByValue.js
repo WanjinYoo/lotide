@@ -1,11 +1,4 @@
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😃Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`😩Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assert = require(`chai`).assert;
 const findKeyByValue = function(input,search) {
   for (let key of Object.keys(input)) {
     if (input[key].includes(search)) return key;
@@ -18,5 +11,5 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
